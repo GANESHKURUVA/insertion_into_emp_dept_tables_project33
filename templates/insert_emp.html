@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form action="" method="POST">
+             {% csrf_token %}
+             <label for="deptno">deptno</label>
+            <select name="deptno" id="deptno">
+                {% for i in deptno %}
+                <option value="{{i}}">{{i.deptno}}</option>
+                {% endfor %}
+            </select><br><br>
+            <label for="empno">Empno</label>
+            <input type="number" name="empno" id="empno"><br><br>
+            <label for="ename">ename</label>
+            <input type="text" name="ename" id="ename"><br><br>
+            <label for="job">JOB</label>
+            <input type="text" name="job" id="job"><br><br>
+            <label for="mgr">MGR</label>
+            <input type="number" name="mgr" id="mgr"><br><br>
+            <label for="hd">hiredate</label>
+            <input type="date" name="hd" id="hd"><br><br>
+            <label for="sal">
+                salary
+            </label>
+            <input type="number" name="sal" id="sal"><br><br>
+            <label for="comission">Commission</label>
+            <input type="number" name="comission" id="comission"><BR><BR>
+
+
+
+
+
+
+            <input type="submit" value="submit" id="b">
+
+
+        </form>
+    </center>
+</body>
+</html>
